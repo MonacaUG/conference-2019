@@ -1,0 +1,32 @@
+
+<div class="bg-color_secondary">
+<div class="container py-5">
+<div class="row">
+  <div class="col-12 text-center">
+      <h2 class="font_Montserrat text-center text-white mb-5"><span class="color">O</span>RGANIZERS</h2>
+    </div>
+</div><!-- row -->
+
+<div class="row people__flex">
+  {% for organizer in site.data.organizers %}
+    <div class="people__item">
+      <img class="img-fluid people__ph rounded-lg" src="img/organizers/{{ organizer['id'] }}.jpg" alt="{{ organizer['display_name'] }}">
+      <div class="people__detail">
+        <p class="people__name">{{ organizer['display_name'] }}</p>
+        <p class="people__sns">
+          {% if organizer['Twitter'] != "" }%}
+          <a href="https://twitter.com/{{ organizer['Twitter'] }}" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          {% endif %}
+          {% if organizer['Facebook'] != "" }%}
+          <a href="https://fb.me/{{ organizer['Facebook'] }}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          {% endif %}
+          {% if organizer['GitHub'] != "" }%}
+          <a href="https://github.com/{{ organizer['GitHub'] }}" target="_blank"><i class="fab fa-github-square"></i></a>
+          {% endif %}
+        </p>
+      </div><!-- people__detail -->
+    </div><!-- people -->
+  {% endfor %}
+</div><!-- row -->
+</div><!-- container -->
+</div><!-- //bg-color_secondary -->

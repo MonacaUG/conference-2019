@@ -1,0 +1,29 @@
+<div class="bg-color_secondary">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="font_Montserrat text-center text-white mb-5"><span class="color">S</span>PEAKER</h2>
+      </div>
+    </div><!-- row -->
+    <div class="speaker__flex">
+      {% if site.data.speakers.size == 0 %}
+        <div class="col-12">
+          <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">W</span>ILL BE ANNOUNCE!</h2>
+        </div>
+      {% else %}
+        <div class="speaker__item">
+          <a href="#" class="speaker__link"><img class="img-fluid speaker__ph rounded-lg" src="http://placehold.jp/400x400.png" alt="中津川篤司"></a>
+          <div class="speaker__detail">
+            <p class="speaker__name">中津川篤司</p>
+            <p class="speaker__sns">
+              <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+              <a href="#" target="_blank"><i class="fab fa-github-square"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </p>
+          </div><!-- speaker__detail -->
+        </div><!-- speaker -->
+      {% endif %}
+</div><!-- row -->
+
+</div><!-- container -->
+</div><!-- //bg-color_secondary -->
