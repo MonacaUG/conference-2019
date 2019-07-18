@@ -6,6 +6,11 @@
   </div>
 </div><!-- row -->
 
+{% if site.data.sponsors.size == 0 %}
+<div class="col-12">
+  <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">ス</span>ポンサーに興味がありますか？ぜひ<a href="#contact">お問い合わせください</a>！</h2>
+</div>
+{% else %}
 
 <div class="row">
   <div class="col-12 col-sm-6">
@@ -105,6 +110,6 @@
       </a>
     </div>
   </div><!-- row -->
-
+{% endif %}
 </div><!-- container -->
 </div><!-- //bg-color_secondary -->
