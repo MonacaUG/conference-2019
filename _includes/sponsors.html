@@ -6,28 +6,44 @@
   </div>
 </div><!-- row -->
 
-{% if site.data.sponsors.size == 0 %}
 <div class="col-12">
   <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">ス</span>ポンサーに興味がありますか？ぜひ<a href="#contact">お問い合わせください</a>！</h2>
 </div>
-{% else %}
 
+{% assign platinums = site.data.sponsors | where: "type", "platinum" %}
+{% if platinums.size > 0 %}
 <div class="row">
+  <div class="col-12">
+    <h3 class="font_Montserrat text-center text-white mb-12">プラチナスポンサー
+    </h3>
+  </div>
+  {% for sponsor in platinums %}
   <div class="col-12 col-sm-6">
-    <a href="#" target="_blank" class="d-block">
-    <img class="img-fluid rounded-lg" src="http://placehold.jp/800x800.png" alt="スポンサー名">
-    <p class="text-center text-white">スポンサー名スポンサー名</p>
+    <a href="{{ sponsor.url }}" target="_blank" class="d-block">
+    <img class="img-fluid rounded-lg" src="./img/sponsors/{{ sponsor.id }}.png" alt="{{ sponsor.name }}">
+    <p class="text-center text-white">{{ sponsor.name }}</p>
     </a>
   </div>
-  <div class="col-12 col-sm-6">
-    <a href="#" target="_blank" class="d-block">
-    <img class="img-fluid rounded-lg" src="http://placehold.jp/800x800.png" alt="スポンサー名">
-    <p class="text-center text-white">スポンサー名スポンサー名</p>
+  {% endfor %}
+</div><!-- row -->
+{% endif %}
+
+{% assign venues = site.data.sponsors | where: "type", "venue" %}
+{% assign sponsor = venues[0] %}
+
+<div class="row  justify-content-center">
+  <div class="col-12">
+    <h3 class="font_Montserrat text-center text-white mb-12">ベニュースポンサー</h3>
+  </div>
+  <div class="col-4">
+    <a href="{{ sponsor.url }}" target="_blank" class="d-block">
+    <img class="img-fluid rounded-lg" src="./img/sponsors/{{ sponsor.id }}.png" alt="{{ sponsor.name }}">
+    <p class="text-center text-white">{{ sponsor.name }}</p>
     </a>
   </div>
 </div><!-- row -->
 
-
+<!--
 <div class="row">
   <div class="col-6 col-sm-4">
     <a href="#" target="_blank" class="d-block">
@@ -47,7 +63,7 @@
     <p class="text-center text-white">スポンサー名スポンサー名</p>
     </a>
   </div>
-</div><!-- row -->
+</div>
 
 
 <div class="row">
@@ -75,7 +91,7 @@
       <p class="text-center text-white">スポンサー名スポンサー名</p>
       </a>
     </div>
-  </div><!-- row -->
+  </div>
 
 
   <div class="row sponsorList">
@@ -109,7 +125,7 @@
       <p class="text-center text-white">スポンサー名スポンサー名</p>
       </a>
     </div>
-  </div><!-- row -->
-{% endif %}
+  </div>
+-->
 </div><!-- container -->
 </div><!-- //bg-color_secondary -->

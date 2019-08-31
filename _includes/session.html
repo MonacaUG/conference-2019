@@ -1,0 +1,30 @@
+{% if session.hidden != 'true' %}
+  <div class="scheduleitem">
+    <div class="scheduleitem__time">{{ session.time }}</div>
+    <div class="scheduleitem__ph">
+      {% if session.id != "" %}
+        <img src="./img/speakers/{{ session.id }}.jpg" alt="{{ session.name }}" width="80" class="rounded-circle">
+      {% endif %}
+    </div>
+    <div class="scheduleitem__detail">
+      <p class="scheduleitem__text">
+        {{ session.title }}
+      </p>
+      <p class="scheduleitem__auther">
+        {% if session.id == "" %}
+          {% if session.name != "" %}
+            後日アナウンス！
+          {% endif %}
+        {% else %}
+          {{ session.name }}{% if session.company != "" %}, {{ session.company }}{% endif %}
+        {% endif %}
+      </p>
+    </div>
+    {% if session.speaker == 'true' %}
+      <div class="scheduleitem__btn">
+        <a class="btn btn-primary br-100 w-100" href="./speakers/{{session.id}}/">詳細 <i class="fas fa-chevron-right"></i></a>
+      </div>
+    {% endif %}
+  </div><!-- //scheduleitem -->
+{% endif %}
+

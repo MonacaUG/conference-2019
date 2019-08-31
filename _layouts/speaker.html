@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+  {% assign sessions = site.data.sessions | where: "id", page.id | where: "speaker", "true" %}
+  {% assign session = sessions[0] %}
+  <head>
+    {% include head.html session=session %}
+    {% seo %}
+  </head>
+  <body class="font_noto">
+    {% include nav.html %}
+    <div class="fluid_extend bg-dark pasonal_extend py-5">
+      <div class="container topmain">
+        <div class="row">
+          <div class="col-12 col-md-4">
+            <p class="text-center">
+              <img class="img-fluid rounded-circle" src="{{ site.baseurl }}/img/speakers/{{ session.id }}.jpg" alt="">
+            </p>
+            <p class="text-center display-4">
+              {% if session.twitter != '' %}
+                <a href="https://twitter.com/{{ session.twitter }}" target="_blank" class="text-white"><i class="fab fa-twitter-square"></i></a>
+              {% endif %}
+              {% if session.facebook != '' %}
+                <a href="https://fb.me/{{ session.facebook }}" target="_blank" class="text-white"><i class="fab fa-facebook-square"></i></a>
+              {% endif %}
+              {% if session.github != '' %}
+                <a href="https://github.com/{{ session.github }}" target="_blank" class="text-white"><i class="fab fa-github-square"></i></a>
+              {% endif %}
+              {% if session.linkedin != '' %}
+                <a href="https://www.linkedin.com/in/{{ session.linkedin }}" target="_blank" class="text-white"><i class="fab fa-linkedin"></i></a>
+              {% endif %}
+              {% if session.web != '' %}
+                <a href="{{ session.web }}" target="_blank" class="text-white"><i class="fas fa-globe"></i></a>
+              {% endif %}
+            </p>
+          </div>
+
+          <div class="col-12 col-md-8 pl-sm-5">
+            <h1 class="font_oswald text-white pasonal_extend__nameen">{{ session.name }}</h1>
+            <p class="pasonal_extend__nameja text-primary mb-1">{{ session.company }}</p>
+            <!-- <p class="pasonal_extend__company text-muted mb-4 mb-sm-5">会社名会社名会社名会社名会社名会社名</p> -->
+            <div class="text-white">
+              {{ session.profile | markdownify }}
+            </div>
+          </div>
+        </div><!-- /row -->
+      </div><!-- /container-fluid -->
+    </div><!-- fluid_extend -->
+
+
+    <div class="fluid_extend py-5 talkov_extend">
+      <div class="container">
+        
+      <div class="row">
+        <div class="col-12 text-center">
+          <h2 class="font_oswald mb-1">TALK OVERVIEW</h2>
+          <p class="mb-4 mb-sm-5 text-primary">トーク概要</p>
+        </div>
+        </div><!-- row -->
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <h3 class="talkov_extend__title mt-0">{{ session.title }}</h3>
+          </div>
+          <div class="col-12">
+            <div class="talkov_extend__area">
+              {{ session.description | markdownify }}
+            </div>
+          </div>
+        </div>
+        {% if session.panel == 'true' %}
+          <div class="row">
+            <div class="col-12 text-center">
+              <h2 class="font_oswald mb-1">PANELIST</h2>
+              <p class="mb-4 mb-sm-5 text-primary">パネリスト</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="row">
+                {% for paneler in site.data.panelers %}
+                  <div class="col-3">
+                    <p>
+                      <img class="rounded-circle" src="{{ site.baseurl }}/assets/img/speakers/{{ paneler.id }}.jpg" alt="{{ paneler.name }}" width="150" height="150" />
+                    </p>
+                    <p>
+                      {{ paneler.name }}, {{ paneler.company }}
+                    </p>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+        </div><!-- container-fluid -->
+      </div><!-- fluid_extend -->
+    {% include footer.html %}
+  </body>
+</html>

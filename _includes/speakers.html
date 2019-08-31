@@ -11,17 +11,21 @@
         <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">W</span>ILL BE ANNOUNCED!</h2>
       </div>
       {% else %}
-        {% for speaker in site.data.speakers %}
+        {% for speaker in site.data.sessions %}
+          {% if speaker.speaker == 'true' %}
           <div class="speaker__item">
-            <a href="speakers/{{ speaker['id'] }}/" class="speaker__link"><img class="img-fluid speaker__ph rounded-lg" src="./img/speakers/{{ speaker['id'] }}.jpg" alt="{{ speaker['display_name'] }}"></a>
+            <a href="speakers/{{ speaker['id'] }}/" class="speaker__link"><img class="img-fluid speaker__ph rounded-lg" src="./img/speakers/{{ speaker['id'] }}.jpg" alt="{{ speaker.name }}"></a>
             <div class="speaker__detail">
-              <p class="speaker__name">{{ speaker['display_name'] }}</p>
+              <p class="speaker__name">
+                {{ speaker.name }}
+                {% if speaker.company != "" %}, {{ speaker.company }}{% endif %}
+              </p>
               <p class="speaker__sns">
                 {% if speaker['twitter'] != "" }%}
                 <a href="https://twitter.com/{{ speaker['twitter'] }}" target="_blank"><i class="fab fa-twitter-square"></i></a>
                 {% endif %}
                 {% if speaker['facebook'] != "" }%}
-                <a href="https://fb.me/{{ speaker['facebook'] }}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="{{ speaker['facebook'] }}" target="_blank"><i class="fab fa-facebook-square"></i></a>
                 {% endif %}
                 {% if speaker['github'] != "" }%}
                 <a href="https://github.com/{{ speaker['gitHub'] }}" target="_blank"><i class="fab fa-github-square"></i></a>
@@ -32,6 +36,7 @@
               </p>
             </div><!-- speaker__detail -->
           </div><!-- speaker -->
+          {% endif %}
         {% endfor %}
         <div class="col-12">
           <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">W</span>ILL BE ANNOUNCED MORE!</h2>

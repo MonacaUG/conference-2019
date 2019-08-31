@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "asial",
+    "name": "アシアル",
+    "url": "https://asial.co.jp",
+    "type": "platinum"
+  },
+  {
+    "id": "people",
+    "name": "ピープルソフトウェア",
+    "url": "https://www.pscsrv.co.jp",
+    "type": "platinum"
+  },
+  {
+    "id": "cybozu",
+    "name": "サイボウズ",
+    "url": "https://cybozu.co.jp",
+    "type": "venue"
+  }
+]
