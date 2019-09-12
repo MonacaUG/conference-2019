@@ -8,7 +8,8 @@
     </div>
     <div class="scheduleitem__detail">
       <p class="scheduleitem__text">
-        {{ session.title }}
+        {% if session.track == '3' and session.id != "" %}（トラック1/2共通）{% endif %}
+        {% if session.track != '3' %} トラック{{session.track}}: {% endif %} {{ session.title }}
       </p>
       <p class="scheduleitem__auther">
         {% if session.id == "" %}
