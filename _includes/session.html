@@ -2,24 +2,44 @@
   <div class="scheduleitem">
     <div class="scheduleitem__time">{{ session.time }}</div>
     <div class="scheduleitem__ph">
-      {% if session.id != "" %}
-        <img src="./img/speakers/{{ session.id }}.jpg" alt="{{ session.name }}" width="80" class="rounded-circle">
+      {% if session.group == "true" %}
+        {% for j in site.data.japanele %}
+          <img src="./img/speakers/{{ j.id }}.jpg" alt="{{ j.name }}" width="60" class="rounded-circle">
+        {% endfor %}
+      {% else %}
+        {% if session.id != "" %}
+          <img src="./img/speakers/{{ session.id }}.jpg" alt="{{ session.name }}" width="80" class="rounded-circle">
+        {% endif %}
       {% endif %}
     </div>
     <div class="scheduleitem__detail">
-      <p class="scheduleitem__text">
-        {% if session.track == '3' and session.id != "" %}（トラック1/2共通）{% endif %}
-        {% if session.track != '3' %} トラック{{session.track}}: {% endif %} {{ session.title }}
-      </p>
-      <p class="scheduleitem__auther">
-        {% if session.id == "" %}
-          {% if session.name != "" %}
-            後日アナウンス！
+      {% if session.group == "true" %}
+        <p class="scheduleitem__text">
+          トラック{{session.track}}: <br />
+          <ul>
+          {% for j in site.data.japanele %}
+            <li>
+              <a href="./speakers/{{j.id}}/">{{ j.title }}</a>
+              <p class="scheduleitem__auther">{{ j.name }}, {{ j.company }}</p>
+            </li>
+          {% endfor %}
+          </ul>
+        </p>
+      {% else %}
+        <p class="scheduleitem__text">
+          {% if session.track == '3' and session.id != "" %}（トラック1/2共通）{% endif %}
+          {% if session.track != '3' %} トラック{{session.track}}: {% endif %} {{ session.title }}
+        </p>
+        <p class="scheduleitem__auther">
+          {% if session.id == "" %}
+            {% if session.name != "" %}
+              後日アナウンス！
+            {% endif %}
+          {% else %}
+            {{ session.name }}{% if session.company != "" %}, {{ session.company }}{% endif %}
           {% endif %}
-        {% else %}
-          {{ session.name }}{% if session.company != "" %}, {{ session.company }}{% endif %}
-        {% endif %}
-      </p>
+        </p>
+      {% endif %}
     </div>
     {% if session.speaker == 'true' %}
       <div class="scheduleitem__btn">

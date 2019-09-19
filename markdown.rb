@@ -18,5 +18,19 @@ json.each do |session|
   lines << [session['time'], track, title, speaker]
 end
 
+
 puts lines.map{|p| "|#{p.join('|')}|"}.join("\n")
 
+puts ""
+puts "## 登壇者情報"
+puts ""
+
+json.each do |session|
+  next if session['hidden'] == 'true'
+  next if session['id'] == ''
+  next if session['speaker'] == 'false' || session['speaker'] == ''
+  puts "### #{session['name']} #{session['company'] == '' ? '' : ', ' + session['company']}"
+  puts ""
+  puts session['profile'].gsub(/\n/, '')
+  puts ""
+end

@@ -14,7 +14,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "13:30",
@@ -31,7 +32,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "false",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "13:40",
@@ -48,7 +50,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "14:20",
@@ -65,7 +68,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": "true"
+    "hidden": "true",
+    "group": ""
   },
   {
     "time": "14:30",
@@ -82,7 +86,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "14:40",
@@ -99,7 +104,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "14:40",
@@ -116,7 +122,8 @@
     "linkedin": "",
     "web": "https://mbaas.nifcloud.com/",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "15:10",
@@ -133,7 +140,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "15:10",
@@ -150,7 +158,8 @@
     "linkedin": "",
     "web": "http://pleasanter.hatenablog.jp/",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "15:35",
@@ -167,7 +176,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "15:45",
@@ -184,7 +194,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "15:45",
@@ -201,7 +212,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "16:15",
@@ -218,7 +230,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": "true"
   },
   {
     "time": "16:15",
@@ -235,7 +248,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "16:45",
@@ -252,7 +266,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "16:45",
@@ -269,7 +284,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "17:10",
@@ -286,7 +302,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "17:20",
@@ -303,7 +320,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": "true"
+    "hidden": "true",
+    "group": ""
   },
   {
     "time": "17:30",
@@ -320,7 +338,8 @@
     "linkedin": "",
     "web": "https://teratail.com/users/akabee",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "18:00",
@@ -337,7 +356,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "true",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "18:30",
@@ -354,7 +374,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "false",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "18:45",
@@ -371,7 +392,8 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   },
   {
     "time": "20:30",
@@ -388,6 +410,7 @@
     "linkedin": "",
     "web": "",
     "speaker": "",
-    "hidden": ""
+    "hidden": "",
+    "group": ""
   }
 ]

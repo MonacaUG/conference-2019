@@ -38,6 +38,19 @@
           </div><!-- speaker -->
           {% endif %}
         {% endfor %}
+        {% for speaker in site.data.japanele %}
+          <div class="speaker__item">
+            <a href="speakers/{{ speaker['id'] }}/" class="speaker__link"><img class="img-fluid speaker__ph rounded-lg" src="./img/speakers/{{ speaker['id'] }}.jpg" alt="{{ speaker.name }}"></a>
+            <div class="speaker__detail">
+              <p class="speaker__name">
+                {{ speaker.name }}
+                {% if speaker.company != "" %}, {{ speaker.company }}{% endif %}
+              </p>
+              <p class="speaker__sns">
+              </p>
+            </div><!-- speaker__detail -->
+          </div><!-- speaker -->
+        {% endfor %}
         <div class="col-12">
           <h2 class="font_Montserrat text-center text-white mb-12"><span class="color">W</span>ILL BE ANNOUNCED MORE!</h2>
         </div>

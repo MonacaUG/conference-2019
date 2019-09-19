@@ -2,6 +2,10 @@
 <html lang="ja">
   {% assign sessions = site.data.sessions | where: "id", page.id | where: "speaker", "true" %}
   {% assign session = sessions[0] %}
+  {% if session == nil %}
+    {% assign sessions = site.data.japanele | where: "id", page.id | where: "speaker", "true" %}
+    {% assign session = sessions[0] %}
+  {% endif %}
   <head>
     {% include head.html session=session %}
     {% seo %}

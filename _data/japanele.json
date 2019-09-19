@@ -1,0 +1,26 @@
+[
+  {
+    "title": "夫婦育児手助けアプリ 「かじいく」",
+    "description": "育児、家事の夫婦間でのタスク管理・共有アプリ",
+    "company": "日本電子専門学校",
+    "name": "旭、斎藤、ヤング",
+    "id": "ikukaji",
+    "speaker": "true"
+  },
+  {
+    "title": "恋愛シミュレーションゲーム 「SS Mydarling」",
+    "description": "３人のキャラクターと会話やチャットを楽しむゲーム",
+    "company": "日本電子専門学校",
+    "name": "安藤、菊地、渡辺",
+    "id": "renai",
+    "speaker": "true"
+  },
+  {
+    "title": "花育成放置ゲーム 「妖精の花園」",
+    "description": "花育成ゲーム＋目覚まし機能",
+    "company": "日本電子専門学校",
+    "name": "ヤン、張、橋本",
+    "id": "hanaikusei",
+    "speaker": "true"
+  }
+]
