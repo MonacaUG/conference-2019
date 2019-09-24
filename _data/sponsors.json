@@ -16,5 +16,11 @@
     "name": "サイボウズ",
     "url": "https://cybozu.co.jp",
     "type": "venue"
+  },
+  {
+    "id": "tam",
+    "name": "TAM",
+    "url": "https://www.tam-tam.co.jp/",
+    "type": "logo"
   }
 ]

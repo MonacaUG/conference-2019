@@ -28,6 +28,24 @@
 </div><!-- row -->
 {% endif %}
 
+{% assign logos = site.data.sponsors | where: "type", "logo" %}
+{% if logos.size > 0 %}
+<div class="row">
+  <div class="col-12">
+    <h3 class="font_Montserrat text-center text-white mb-12">ロゴスポンサー
+    </h3>
+  </div>
+  {% for sponsor in logos %}
+  <div class="col-3 col-sm-3">
+    <a href="{{ sponsor.url }}" target="_blank" class="d-block">
+    <img class="img-fluid rounded-lg" src="./img/sponsors/{{ sponsor.id }}.png" alt="{{ sponsor.name }}">
+    <p class="text-center text-white">{{ sponsor.name }}</p>
+    </a>
+  </div>
+  {% endfor %}
+</div><!-- row -->
+{% endif %}
+
 {% assign venues = site.data.sponsors | where: "type", "venue" %}
 {% assign sponsor = venues[0] %}
 
