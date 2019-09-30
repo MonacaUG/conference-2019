@@ -204,7 +204,7 @@
     "description": "今年もiOS 13/Android 10でSign In with Appleやダークモードなど様々な機能が搭載されました。\nネイティブアプリのUXがどんどん向上していく中、WebベースのMonacaアプリはどう追従していけば良いのか。\n色々と試してみた結果をお話しします。",
     "company": "ピープルソフトウェア",
     "name": "岸野 大輔",
-    "id": "kishino_",
+    "id": "kishino",
     "profile": "岡山でここ2年はひたすらMonacaアプリを開発しています。よく使う組み合わせはOnsenUI＋Vue.js。\n最近はTypeScriptやNuxt.jsを勉強中。",
     "twitter": "",
     "facebook": "",
