@@ -28,5 +28,11 @@
     "name": "バルテス・モバイルテクノロジー",
     "url": "https://www.valtes-mt.co.jp/",
     "type": "gold"
+  },
+  {
+    "id": "ncmb",
+    "name": "ニフクラ mobile backend",
+    "url": "https://mbaas.nifcloud.com/monaca_mbaas/",
+    "type": "logo"
   }
 ]
